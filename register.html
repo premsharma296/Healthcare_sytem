@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Registration</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="form-container register-form">
+    <h2>Create Your Account</h2>
+    <form id="registerForm">
+      <div class="input-group">
+        <input type="text" name="name" placeholder="Full Name" required />
+      </div>
+      <div class="input-group">
+        <input type="email" name="email" placeholder="Email" required />
+      </div>
+      <div class="input-group">
+        <input type="password" name="password" placeholder="Password" required />
+      </div>
+      <div class="input-group">
+        <input type="number" name="age" placeholder="Age" required />
+      </div>
+      <div class="input-group">
+        <select name="gender" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <input type="text" name="contact" placeholder="Contact Number" required />
+      </div>
+      <button type="submit" class="submit-btn">Register</button>
+    </form>
+  </div>
+</body>
+</html>

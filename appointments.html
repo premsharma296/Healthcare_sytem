@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Appointments</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1d3557, #457b9d);
+      color: #f1faee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .table-container {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      width: 100%;
+      max-width: 800px;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .table-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    thead {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    th {
+      font-weight: 600;
+      color: #f1faee;
+    }
+
+    tr {
+      transition: background 0.3s ease;
+    }
+
+    tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    tr:hover {
+      background-color: rgba(168, 218, 220, 0.2);
+      transform: scale(1.01);
+    }
+
+    td {
+      color: #f1faee;
+    }
+
+    @media screen and (max-width: 600px) {
+      .table-container {
+        padding: 1rem;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 1rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      }
+
+      td {
+        padding: 0.5rem;
+        text-align: left;
+        position: relative;
+      }
+
+      td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        color: #a8dadc;
+        margin-bottom: 0.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="table-container">
+    <h2>Your Appointments</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Doctor</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Name">Rahul</td>
+          <td data-label="Doctor">Dr. Smith</td>
+          <td data-label="Date">2025-06-14</td>
+          <td data-label="Time">10:00</td>
+        </tr>
+        <tr>
+          <td data-label="Name">Anita</td>
+          <td data-label="Doctor">Dr. Jane</td>
+          <td data-label="Date">2025-06-15</td>
+          <td data-label="Time">14:30</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

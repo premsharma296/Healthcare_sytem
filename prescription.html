@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prescriptions</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1d3557, #457b9d);
+      color: #f1faee;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .prescription-container {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 2rem 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      max-width: 600px;
+      width: 100%;
+      animation: zoomIn 0.8s ease-out;
+      transform-origin: center;
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .prescription-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .prescription-container p {
+      font-size: 1.1rem;
+      margin: 1rem 0;
+      padding: 0.75rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-left: 4px solid #a8dadc;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .prescription-container p:hover {
+      transform: scale(1.02);
+    }
+
+    .prescription-container strong {
+      color: #ffd6a5;
+    }
+
+    @media (max-width: 600px) {
+      .prescription-container {
+        padding: 1.5rem;
+      }
+
+      .prescription-container h2 {
+        font-size: 1.6rem;
+      }
+
+      .prescription-container p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="prescription-container">
+    <h2>Prescription Details</h2>
+    <p><strong>Patient:</strong> Rahul</p>
+    <p><strong>Doctor:</strong> Dr. Smith</p>
+    <p><strong>Medicine:</strong> Paracetamol 500mg, 3 times a day</p>
+    <p><strong>Notes:</strong> Take after food.</p>
+  </div>
+</body>
+</html>
